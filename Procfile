@@ -1,1 +1,1 @@
-web: python wgaccounting/manage.py runserver
+web: python wgaccounting/manage.py runserver 0.0.0.0:80
