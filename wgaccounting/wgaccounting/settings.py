@@ -25,7 +25,7 @@ SECRET_KEY = 'ah7%(cb(r*b58h6hut71-%yw)@7fqe)6k@$7ct*9+a1ayi7-bi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dhwg-management.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'dhwg-management.herokuapp.com']
 
 AUTH_USER_MODEL = 'persons.Inhabitant'
 
