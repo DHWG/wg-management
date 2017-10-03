@@ -19,3 +19,6 @@ class Purchase(models.Model):
     buyer = models.ForeignKey(Inhabitant, on_delete=models.CASCADE, related_name='buyer')
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product')
+
+    def __str__(self):
+        return f'[ {self.buyer.username} bought a {self.product.name} for {self.product.unit_price}€ @ {self.date} ]'
