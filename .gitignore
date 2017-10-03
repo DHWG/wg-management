@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/osx,python,django,pycharm
 
 ### Django ###
@@ -210,3 +209,4 @@ venv.bak/
 wgaccounting/media
 
 *.iml
+static/
