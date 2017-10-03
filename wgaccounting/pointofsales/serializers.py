@@ -6,7 +6,7 @@ class ProductSerializer(serializers.ModelSerializer):
         model = models.Product
         fields = ('id', 'name', 'image', 'unit_price')
 
-class PurchaseSerializer(serializers.HyperlinkedModelSerializer):
+class PurchaseSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Purchase
         fields = ('id', 'date', 'buyer', 'product')
