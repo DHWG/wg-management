@@ -3,4 +3,4 @@ from .models import Inhabitant
 
 @admin.register(Inhabitant)
 class InhabitantAdmin(admin.ModelAdmin):
-    pass
+    exclude = ('password',)
