@@ -17,12 +17,13 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework.routers import DefaultRouter
 from django.conf.urls.static import static
-from persons.views import InhabitantViewSet
+from persons.views import InhabitantViewSet, ExpenseViewSet
 from pointofsales.views import ProductViewSet, PurchaseViewSet
 from django.conf import settings
 
 router = DefaultRouter()
 router.register('inhabitants', InhabitantViewSet)
+router.register('expenses', ExpenseViewSet)
 router.register('pos/products', ProductViewSet)
 router.register('pos/purchases', PurchaseViewSet)
 
