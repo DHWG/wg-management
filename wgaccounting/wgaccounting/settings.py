@@ -25,7 +25,7 @@ SECRET_KEY = 'ah7%(cb(r*b58h6hut71-%yw)@7fqe)6k@$7ct*9+a1ayi7-bi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dhwg-management.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 AUTH_USER_MODEL = 'persons.Inhabitant'
 
@@ -76,19 +76,12 @@ WSGI_APPLICATION = 'wgaccounting.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-if 'DATABASE_URL' in os.environ:
-    import dj_database_url
-    DATABASES = {
-        'default': dj_database_url.config()
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+}
 
 
 # Password validation
