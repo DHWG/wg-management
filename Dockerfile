@@ -12,4 +12,4 @@ COPY . .
 EXPOSE 8000
 
 ENTRYPOINT ["/usr/local/bin/python", "wgaccounting/manage.py"]
-CMD ["runserver"]
+CMD ["runserver", "0.0.0.0:8000"]
