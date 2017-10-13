@@ -11,4 +11,5 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["/bin/sh", "start.sh"]
+ENTRYPOINT ["/usr/local/bin/python", "wgaccounting/manage.py"]
+CMD ["runserver"]
