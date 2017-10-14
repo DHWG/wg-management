@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'django_pam',
     'persons.apps.PersonsConfig',
     'pointofsales.apps.PointofsalesConfig'
 ]
@@ -55,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-  'django_pam.auth.backends.PAMBackend',
+  'wgaccounting.auth.PAMBackend',
 ]
 
 ROOT_URLCONF = 'wgaccounting.urls'
