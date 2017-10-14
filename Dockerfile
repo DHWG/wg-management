@@ -2,7 +2,7 @@ FROM python:3.6.3
 
 WORKDIR /usr/src/app
 
-RUN apt-get install -y build-essential postgresql-dev jpeg-dev zlib-dev
+RUN apt-get update && apt-get install -y build-essential libpq-dev libjpeg-dev zlib1g-dev
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
