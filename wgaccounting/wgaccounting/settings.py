@@ -53,6 +53,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'wgaccounting.auth.PAMBackend',
+    'django.contrib.auth.backends.ModelBackend'
+]
+
 ROOT_URLCONF = 'wgaccounting.urls'
 
 TEMPLATES = [
