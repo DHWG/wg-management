@@ -19,6 +19,7 @@ from rest_framework.routers import DefaultRouter
 from django.conf.urls.static import static
 from persons.views import InhabitantViewSet, ExpenseViewSet
 from pointofsales.views import ProductViewSet, PurchaseViewSet
+from kitchenduty.views import RosterViewSet, ShiftPeriodViewSet
 from django.conf import settings
 
 router = DefaultRouter()
@@ -26,8 +27,11 @@ router.register('inhabitants', InhabitantViewSet)
 router.register('expenses', ExpenseViewSet)
 router.register('pos/products', ProductViewSet)
 router.register('pos/purchases', PurchaseViewSet)
+router.register('kitchenduty/roster', RosterViewSet)
+router.register('kitchenduty/shift', ShiftPeriodViewSet)
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

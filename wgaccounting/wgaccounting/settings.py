@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'persons.apps.PersonsConfig',
-    'pointofsales.apps.PointofsalesConfig'
+    'pointofsales.apps.PointofsalesConfig',
+    'kitchenduty.apps.KitchendutyConfig'
 ]
 
 MIDDLEWARE = [
