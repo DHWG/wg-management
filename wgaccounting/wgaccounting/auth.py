@@ -3,7 +3,7 @@ from pam import pam
 
 class PAMBackend(object):
     def authenticate(self, request, username=None, password=None):
-        if not pam().authenticate(username, password):
+        if not pam().authenticate(username.lower(), password):
             return None
         try:
             return Inhabitant.objects.get_by_natural_key(username)
